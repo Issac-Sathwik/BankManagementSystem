@@ -1,0 +1,79 @@
+package bank.management.system;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import java.sql.ResultSet;
+
+import java.util.*;
+
+import javax.swing.*;
+
+public class pin extends JFrame{
+	
+	JButton b1,b2;
+	JPasswordField p1,p2;
+	
+	pin(){
+		
+		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/abg.jpg"));
+		Image i2 = i1.getImage().getScaledInstance(500, 500, Image.SCALE_DEFAULT);
+		ImageIcon i3 = new ImageIcon(i2);
+		JLabel image = new JLabel(i3);
+		image.setBounds(0,0,500,500);
+		add(image);
+		
+		JLabel l1 = new JLabel ("Welcome to Banking services");
+		l1.setFont(new Font("System", Font.BOLD, 24));
+		l1.setBounds(100,50,400,35);
+		image.add(l1);
+		
+		JLabel l2 = new JLabel ("Change Pin services:");
+		l2.setFont(new Font("System", Font.ITALIC, 20));
+		l2.setBounds(50,100,300,35);
+		image.add(l2);
+		
+		JLabel l3 = new JLabel ("New PIN:");
+		l3.setFont(new Font("System", Font.ITALIC, 20));
+		l3.setBounds(50,150,300,35);
+		image.add(l3);
+		
+		p1 = new JPasswordField(15);
+		p1.setBounds(150,150,230,30);
+		p1.setFont(new Font("Arial", Font.BOLD, 14));
+		add(p1);
+		
+		JLabel l4 = new JLabel ("Re-enter new PIN:");
+		l4.setFont(new Font("System", Font.ITALIC, 20));
+		l4.setBounds(50,200,300,35);
+		image.add(l4);
+		
+		p2 = new JPasswordField(15);
+		p2.setBounds(325,250,230,30);
+		p2.setFont(new Font("Arial", Font.BOLD, 14));
+		add(p2);
+		
+		b1 = new JButton("DEPOSIT");
+		b1.setBounds(300,300,150,35);
+		//b1.addActionListener(this);
+		image.add(b1);
+		
+		b2 = new JButton("BACK");
+		b2.setBounds(300,350,150,35);
+		//b2.addActionListener(this);
+		image.add(b2);
+		
+		setLayout(null);
+		setSize(600,600);
+		setLocation(500,200);
+		setVisible(true);
+		
+		
+	}
+	public static void main(String[] args) {
+		new pin();
+		
+	}
+
+}

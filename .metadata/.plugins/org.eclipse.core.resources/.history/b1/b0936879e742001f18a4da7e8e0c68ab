@@ -1,0 +1,146 @@
+package bank.management.system;
+
+import java.awt.*;
+
+import java.util.*;
+
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.*;
+
+public class signup extends JFrame{
+	
+	JRadioButton r1,r2,r3,r4;
+	
+	JTextField textname, textaddress, textnumber, textemail;
+	JDateChooser dateChooser;
+	
+	
+	Random ran = new Random();
+	long first3 = (ran.nextLong() % 700l) + 100l;
+	String first = " " + Math.abs(first3);
+	
+	signup(){
+		super("Customer Registration Form");
+		
+		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
+		Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+		ImageIcon i3 = new ImageIcon(i2);
+		JLabel image = new JLabel(i3);
+		image.setBounds(25,10,100,100);
+		add(image);
+		
+		JLabel label1 = new JLabel("Form No."+first);
+		label1.setBounds(160,20,600,40);
+		label1.setFont(new Font("Raleway", Font.BOLD, 38));
+		add(label1);
+		
+		JLabel label2 = new JLabel("Page 1");
+		label2.setBounds(330,70,600,30);
+		label2.setFont(new Font("Raleway", Font.BOLD, 22));
+		add(label2);
+		
+		JLabel label3 = new JLabel("Personal Details");
+		label3.setBounds(290,90,600,30);
+		label3.setFont(new Font("Raleway", Font.BOLD, 22));
+		add(label3);
+		
+		JLabel labelName = new JLabel("Full Name:");
+		labelName.setFont(new Font("Raleway", Font.BOLD, 20));
+		labelName.setBounds(100,190,200,30);
+		add(labelName);
+		
+		textname = new JTextField();
+		textname.setFont(new Font("Raleway", Font.BOLD, 14));
+		textname.setBounds(300,190,400,30);
+		add(textname);
+		
+		JLabel labeladdress = new JLabel("Address:");
+		labeladdress.setFont(new Font("Raleway", Font.BOLD, 20));
+		labeladdress.setBounds(100,220,100,30);
+		add(labeladdress);
+		
+		textaddress = new JTextField();
+		textaddress.setFont(new Font("Raleway", Font.BOLD, 14));
+		textaddress.setBounds(300,220,400,30);
+		add(textaddress);
+		
+		JLabel labelNumber = new JLabel("Mobile No:");
+		labelNumber.setFont(new Font("Raleway", Font.BOLD, 20));
+		labelNumber.setBounds(100,250,200,30);
+		add(labelNumber);
+		
+		textnumber = new JTextField();
+		textnumber.setFont(new Font("Raleway", Font.BOLD, 14));
+		textnumber.setBounds(300,250,400,30);
+		add(textnumber);
+		
+		
+		JLabel labelEmail = new JLabel("Email id:");
+		labelEmail.setFont(new Font("Raleway", Font.BOLD, 20));
+		labelEmail.setBounds(100,280,200,30);
+		add(labelEmail);
+		
+		textemail = new JTextField();
+		textemail.setFont(new Font("Raleway", Font.BOLD, 14));
+		textemail.setBounds(300,280,400,30);
+		add(textemail);
+		
+		JLabel labeldob = new JLabel("Date of Birth:");
+		labeldob.setFont(new Font("Raleway", Font.BOLD, 20));
+		labeldob.setBounds(100,310,300,30);
+		add(labeldob);
+		
+		dateChooser = new JDateChooser();
+		dateChooser.setFont(new Font("Raleway", Font.BOLD, 14));
+		dateChooser.setBounds(300,310,400,30);
+		add(dateChooser);
+		
+		JLabel labelgender = new JLabel("Gender:");
+		labelgender.setFont(new Font("Ralway", Font.BOLD, 20));
+		labelgender.setBounds(100,340,200,30);
+		add(labelgender);
+		
+		r1 = new JRadioButton("Male");
+		r1.setFont(new Font("Raleway", Font.BOLD, 14));
+		r1.setBounds(300,340,100,30);
+		add(r1);
+		
+		r2 = new JRadioButton("Female");
+		r2.setFont(new Font("Raleway", Font.BOLD, 14));
+		r2.setBounds(400,340,200,30);
+		add(r2);
+		
+		ButtonGroup buttonGroup = new ButtonGroup();
+		buttonGroup.add(r1);
+		buttonGroup.add(r2);
+		
+		JLabel labelacc = new JLabel("Type of Account:");
+		labelacc.setFont(new Font("Ralway", Font.BOLD, 20));
+		labelacc.setBounds(100,370,200,30);
+		add(labelacc);
+		
+		r3 = new JRadioButton("Savings Account");
+		r3.setFont(new Font("Raleway", Font.BOLD, 14));
+		r3.setBounds(300,370,200,30);
+		add(r3);
+		
+		r4 = new JRadioButton("Current Account");
+		r4.setFont(new Font("Raleway", Font.BOLD, 14));
+		r4.setBounds(300,470,200,30);
+		add(r4);
+		
+		ButtonGroup buttongroup = new ButtonGroup();
+		buttongroup.add(r3);
+		buttongroup.add(r4);
+		
+		getContentPane().setBackground(new Color(222, 225, 228));
+		setLayout(null);
+		setSize(850,800);
+		setLocation(360,40);
+		setVisible(true);
+	}
+public static void main(String[] args) {
+	new signup();
+}
+}

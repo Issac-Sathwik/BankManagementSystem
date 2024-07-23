@@ -1,0 +1,13 @@
+package bank.management.system;
+
+import javax.swing.*;
+
+public class withdrawl extends JFrame{
+	
+	withdrawl(){
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

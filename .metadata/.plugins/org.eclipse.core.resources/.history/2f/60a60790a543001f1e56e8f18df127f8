@@ -1,0 +1,14 @@
+package bank.management.system;
+
+import javax.swing.*;
+
+public class signup1 extends JFrame {
+
+	signup1(){
+		setSize(500,500);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new signup1();
+	}
+}

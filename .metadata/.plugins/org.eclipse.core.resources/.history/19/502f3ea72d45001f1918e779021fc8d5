@@ -1,0 +1,47 @@
+package bank.management.system;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import java.util.*;
+
+import javax.swing.*;
+
+public class benq extends JFrame{
+	benq(){
+		
+		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/abg.jpg"));
+		Image i2 = i1.getImage().getScaledInstance(500, 500, Image.SCALE_DEFAULT);
+		ImageIcon i3 = new ImageIcon(i2);
+		JLabel image = new JLabel(i3);
+		image.setBounds(0,0,500,500);
+		add(image);
+		
+		JLabel l1 = new JLabel ("Welcome to Banking services");
+		l1.setFont(new Font("System", Font.BOLD, 24));
+		l1.setBounds(100,50,400,35);
+		image.add(l1);
+		
+		JLabel l2 = new JLabel ("Enter the amount to Withdraw:");
+		l2.setFont(new Font("System", Font.ITALIC, 20));
+		l2.setBounds(50,100,300,35);
+		image.add(l2);
+		
+		JLabel l3 = new JLabel ("(Maximum Withdrawl amount is Rs.10,000/-)");
+		l3.setFont(new Font("System", Font.ITALIC, 14));
+		l3.setBounds(50,150,500,35);
+		image.add(l3);
+		
+		setLayout(null);
+		setSize(500,500);
+		setLocation(500,200);
+		setVisible(true);
+		
+	}
+	
+	public static void main(String[] args) {
+		new benq();
+	}
+
+}

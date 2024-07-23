@@ -1,0 +1,25 @@
+package bank.management.system;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import java.util.*;
+
+import javax.swing.*;
+
+public class benq extends JFrame{
+	benq(){
+		
+		setLayout(null);
+		setSize(500,500);
+		setLocation(500,200);
+		setVisible(true);
+		
+	}
+	
+	public static void main(String[] args) {
+		new benq();
+	}
+
+}

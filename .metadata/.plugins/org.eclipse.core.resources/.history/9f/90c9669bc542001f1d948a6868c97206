@@ -1,0 +1,17 @@
+package bank.management.system;
+
+import javax.swing.*;
+
+public class admin extends JFrame{
+	admin(){
+		setSize(850,480);
+		setLocation(450,200);
+		setVisible(true);
+		
+		
+		
+	}
+	public static void main(String[] args) {
+		new admin();
+	}
+}
